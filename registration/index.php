@@ -14,33 +14,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Landlord Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
 </head>
 <body>
 
-<div class="header">
-	<h2>Home Page</h2>
-</div>
-<div class="content">
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-      	<h3>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</h3>
-      </div>
-  	<?php endif ?>
+		<!-- navbar-->
+		<nav>
+			<div class="nav-wrapper grey darken-4">
+			<a href="home.php" class="brand-logo"> Rentit</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href=home.php>Logout</a></li>
+			</ul>
+			</div>
+		</nav>
 
-    <!-- logged in user information -->
-    <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-    <?php endif ?>
-</div>
+
+
+		<div class="header">
+			<h2>Welcome Landlord </h2>
+			<h5>Insert house for rent as well as delete records</h5>
+		</div>
+		<div class="content">
+			<!-- notification message -->
+			<?php if (isset($_SESSION['success'])) : ?>
+			<div class="error success" >
+				<h3>
+				<?php 
+					echo $_SESSION['success']; 
+					unset($_SESSION['success']);
+				?>
+				</h3>
+			</div>
+			<?php endif ?>
+
+			<!-- logged in user information -->
+			<?php  if (isset($_SESSION['username'])) : ?>
+				<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+			<?php endif ?>
+		</div>
+
+		<center><button><a href="form.php">New House</a></button></center>
+
+
+
+
 		
 </body>
 </html>
