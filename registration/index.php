@@ -38,7 +38,7 @@
 
 		<div class="header">
 			<h2>Welcome Landlord </h2>
-			<h5>Insert house for rent as well as delete records</h5>
+			<h5>Rent your house using Rentit!</h5>
 		</div>
 		<div class="content">
 			<!-- notification message -->
@@ -59,9 +59,7 @@
 			<?php endif ?>
 		</div>
 
-		<center><button><a href="form.php">New House</a></button></center>
-
-
+		<center><button><a href="form.php">House on rent records</a></button></center>
 
 
 		

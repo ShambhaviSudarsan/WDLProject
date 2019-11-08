@@ -26,7 +26,7 @@
 
 			<div class="cover">
 				<h1>Search for rentals in your preferred location.</h1>
-				<form  class="flex-form" action="pro.php" method="post">
+				<form  class="flex-form" action="search.php" method="post">
 					<label for="from">
 					<i class="ion-location"></i>
 					</label>
@@ -36,8 +36,6 @@
 			</div>
 
 	</div>
-
-
 
 
 </body>
